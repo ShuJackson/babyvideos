@@ -18,6 +18,7 @@ export default withAuthenticator(App, true); */
 /* eslint-disable import/order */
 /* eslint-disable no-underscore-dangle */
 import React from 'react';
+import './App.css';
 import './index.css';
 import GridView from '../GridView';
 import uuidv4 from 'uuid/v4';
@@ -149,6 +150,7 @@ class Admin extends React.Component {
               </div>
             </form>
           </header>
+          <GridView />
         </div>
       );
     }
