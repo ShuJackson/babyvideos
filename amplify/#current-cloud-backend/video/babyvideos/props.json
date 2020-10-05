@@ -1,0 +1,27 @@
+{
+    "shared": {
+        "resourceName": "babyvideos"
+    },
+    "template": {
+        "name": "Amplify_Video_System_Ott_Hls_Ts_Avc_Aac.json"
+    },
+    "contentDeliveryNetwork": {
+        "signedKey": false,
+        "enableDistribution": true
+    },
+    "permissions": {
+        "permissionSchema": [
+            "admin",
+            "any"
+        ]
+    },
+    "cms": {
+        "overrideSchema": true,
+        "editAPI": true
+    },
+    "parameters": {
+        "authRoleName": {
+            "Ref": "AuthRoleName"
+        }
+    }
+}

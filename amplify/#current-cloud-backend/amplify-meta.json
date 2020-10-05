@@ -1,0 +1,106 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-babyvideos-dev-170657-authRole",
+      "UnauthRoleArn": "arn:aws:iam::180271562455:role/amplify-babyvideos-dev-170657-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::180271562455:role/amplify-babyvideos-dev-170657-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-babyvideos-dev-170657-deployment",
+      "UnauthRoleName": "amplify-babyvideos-dev-170657-unauthRole",
+      "StackName": "amplify-babyvideos-dev-170657",
+      "StackId": "arn:aws:cloudformation:us-east-1:180271562455:stack/amplify-babyvideos-dev-170657/36119ca0-04f3-11eb-94c5-0e3edd8361ed",
+      "AmplifyAppId": "d28ij4oevhds1t"
+    }
+  },
+  "auth": {
+    "babyvideosf1fcef5a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-babyvideos-dev-170657-deployment/amplify-cfn-templates/auth/babyvideosf1fcef5a-cloudformation-template.yml",
+        "logicalId": "authbabyvideosf1fcef5a"
+      },
+      "lastPushTimeStamp": "2020-10-02T21:20:45.245Z",
+      "output": {
+        "AppClientSecret": "kmi4qbr0von78g6dkjlcs5v7gn3qudmgsgvkpn45838qmmgd4pa",
+        "UserPoolId": "us-east-1_kdSUSoyyt",
+        "AppClientIDWeb": "7669145vutseovimr5qra0r34t",
+        "AppClientID": "7r4ctmkvqlljhtsd73nu3cnjlp",
+        "IdentityPoolId": "us-east-1:2a3d7ce8-4d59-4895-aba0-bf4aefc3717c",
+        "IdentityPoolName": "babyvideosf1fcef5a_identitypool_f1fcef5a__dev",
+        "UserPoolName": "babyvideosf1fcef5a_userpool_f1fcef5a"
+      },
+      "lastPushDirHash": "sGJpt4zRmVMEHVpjIXGCzDoWoZE="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "babyvideosf1fcef5a",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-babyvideos-dev-170657-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "lastPushTimeStamp": "2020-10-02T21:20:45.245Z",
+      "output": {
+        "AdminGroupRole": "arn:aws:iam::180271562455:role/us-east-1_kdSUSoyyt-AdminGroupRole"
+      },
+      "lastPushDirHash": "nDK5mpU66b4wd6E+VcqxO1AdpLk="
+    }
+  },
+  "api": {
+    "babyvideos": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authbabyvideosf1fcef5a"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "qtrk6lfmgje7tenizgjradepgm",
+        "GraphQLAPIEndpointOutput": "https://sfajnozrgvg6jknai3ggxmgabm.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-babyvideos-dev-170657-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apibabyvideos"
+      },
+      "lastPushTimeStamp": "2020-10-02T21:20:45.245Z",
+      "lastPushDirHash": "oujZGUxrKfY1gKqZMwbLjy7SDws="
+    }
+  },
+  "video": {
+    "babyvideos": {
+      "service": "video",
+      "serviceType": "video-on-demand",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-babyvideos-dev-170657-deployment/amplify-cfn-templates/video/babyvideos-vod-workflow-template.yaml",
+        "logicalId": "videobabyvideos"
+      },
+      "lastPushTimeStamp": "2020-10-02T21:20:45.245Z",
+      "output": {
+        "oVodOutputUrl": "d257ls5wx5kkzq.cloudfront.net",
+        "oVODOutputS3": "babyvideos-dev-output-b3cy3bbx",
+        "oVODInputS3": "babyvideos-dev-input-b3cy3bbx"
+      },
+      "lastPushDirHash": "Qd8N9I9iL5/SjMiUJtfhrWCmtAk="
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "babyvideos",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authbabyvideosf1fcef5a",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-babyvideos-dev-170657-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/e60535ec8da18963f1c8bde9473b60c29b30554a"
+}

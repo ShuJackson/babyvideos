@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-babyvideos-dev-170657-authRole",
+      "UnauthRoleArn": "arn:aws:iam::180271562455:role/amplify-babyvideos-dev-170657-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::180271562455:role/amplify-babyvideos-dev-170657-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-babyvideos-dev-170657-deployment",
+      "UnauthRoleName": "amplify-babyvideos-dev-170657-unauthRole",
+      "StackName": "amplify-babyvideos-dev-170657",
+      "StackId": "arn:aws:cloudformation:us-east-1:180271562455:stack/amplify-babyvideos-dev-170657/36119ca0-04f3-11eb-94c5-0e3edd8361ed",
+      "AmplifyAppId": "d28ij4oevhds1t"
+    },
+    "categories": {
+      "auth": {
+        "babyvideosf1fcef5a": {}
+      },
+      "video": {
+        "babyvideos": {
+          "s3UUID": "b3cy3bbx"
+        }
+      }
+    }
+  }
+}
